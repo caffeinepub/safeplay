@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Bricolage Grotesque";
+  src: url("/assets/fonts/BricolageGrotesque.woff2") format("woff2");
+  font-weight: 200 800;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "General Sans";
+  src: url("/assets/fonts/GeneralSans.woff2") format("woff2");
+  font-weight: 200 700;
+  font-display: swap;
+}
+
+@layer base {
+  :root {
+    --radius: 0.75rem;
+    /* Dark navy mission-control theme — always dark */
+    --background: 0.1 0.04 258;
+    --foreground: 0.96 0.01 245;
+    --card: 0.16 0.05 236;
+    --card-foreground: 0.96 0.01 245;
+    --popover: 0.18 0.05 236;
+    --popover-foreground: 0.96 0.01 245;
+    --primary: 0.74 0.19 148;
+    --primary-foreground: 0.1 0.02 148;
+    --secondary: 0.22 0.04 236;
+    --secondary-foreground: 0.85 0.02 245;
+    --muted: 0.18 0.03 240;
+    --muted-foreground: 0.6 0.03 245;
+    --accent: 0.22 0.05 236;
+    --accent-foreground: 0.96 0.01 245;
+    --destructive: 0.55 0.22 25;
+    --destructive-foreground: 0.96 0.01 0;
+    --border: 0.25 0.04 236;
+    --input: 0.22 0.04 236;
+    --ring: 0.55 0.1 245;
+    --chart-1: 0.55 0.22 25;
+    --chart-2: 0.74 0.19 148;
+    --chart-3: 0.72 0.17 65;
+    --chart-4: 0.85 0.18 88;
+    --chart-5: 0.6 0.18 260;
+    --sidebar: 0.13 0.04 255;
+    --sidebar-foreground: 0.96 0.01 245;
+    --sidebar-primary: 0.74 0.19 148;
+    --sidebar-primary-foreground: 0.1 0.02 148;
+    --sidebar-accent: 0.18 0.04 236;
+    --sidebar-accent-foreground: 0.96 0.01 245;
+    --sidebar-border: 0.22 0.04 236;
+    --sidebar-ring: 0.55 0.1 245;
+    /* Status colors */
+    --status-green: 0.74 0.19 148;
+    --status-red: 0.55 0.22 25;
+    --status-orange: 0.67 0.18 50;
+    --status-yellow: 0.85 0.17 88;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    color-scheme: dark;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    background: linear-gradient(
+      160deg,
+      oklch(0.1 0.04 258) 0%,
+      oklch(0.07 0.03 258) 100%
+    );
+    min-height: 100vh;
+  }
+}
